@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Send Email to Vendor">
+        <lightning-combobox
+            label="Select Vendor"
+            options={contacts}
+            onchange={handleContactSelection}>
+        </lightning-combobox>
+        <lightning-combobox
+            label="Select Email Template"
+            options={emailTemplates}
+            onchange={handleTemplateSelection}>
+        </lightning-combobox>
+
+        <lightning-input label="Subject" value={subject}></lightning-input>
+        <lightning-textarea label="Body" value={body} variant="textarea"></lightning-textarea>
+
+        <lightning-button label="Send Email" onclick={sendEmail}></lightning-button>
+    </lightning-card>
+</template>
